@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #202537;
+  background: #f5f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 50% 28%, rgba(226, 232, 255, 0.7), transparent 40%),
+    #f5f7fb;
+}
+
+button, input { font: inherit; }
+
+.page-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px 24px;
+}
+
+.auth-card {
+  width: min(100%, 440px);
+  padding: 44px 48px 32px;
+  background: #fff;
+  border: 1px solid #e9ebf2;
+  border-radius: 20px;
+  box-shadow: 0 24px 70px rgba(44, 55, 96, 0.09);
+}
+
+.brand-mark {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 13px;
+  color: #fff;
+  background: #5865e8;
+  box-shadow: 0 7px 16px rgba(88, 101, 232, 0.26);
+  font: 800 24px "Manrope", sans-serif;
+}
+
+.eyebrow {
+  margin: 28px 0 8px;
+  color: #6c73a8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.65px;
+}
+
+h1 {
+  margin: 0;
+  color: #202537;
+  font: 800 29px/1.25 "Manrope", sans-serif;
+  letter-spacing: -0.8px;
+}
+
+.subtitle {
+  margin: 10px 0 30px;
+  color: #7a8092;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+form { display: flex; flex-direction: column; }
+
+label {
+  margin-bottom: 8px;
+  color: #34394a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  color: #252a3b;
+  background: #fff;
+  border: 1px solid #dfe2eb;
+  border-radius: 9px;
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+input::placeholder { color: #a4a8b7; }
+input:focus {
+  border-color: #727df0;
+  box-shadow: 0 0 0 3px rgba(88, 101, 232, 0.12);
+}
+
+.password-label { display: flex; justify-content: space-between; margin-top: 20px; }
+
+.primary-button {
+  display: flex;
+  height: 49px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+  color: #fff;
+  background: #5865e8;
+  border: 0;
+  border-radius: 9px;
+  box-shadow: 0 6px 13px rgba(88, 101, 232, 0.2);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.primary-button:hover:not(:disabled) { background: #4956d7; transform: translateY(-1px); }
+.primary-button:disabled { cursor: wait; opacity: 0.7; }
+
+.error-message {
+  margin: 14px 0 -12px;
+  color: #ba3446;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.security-note {
+  margin: 26px 0 0;
+  color: #9297a7;
+  text-align: center;
+  font-size: 11px;
+}
+
+.security-note span { margin-right: 5px; color: #64b78a; font-size: 9px; }
+
+.signed-in-panel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #eceef4;
+  border-radius: 12px;
+}
+
+.avatar {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  place-items: center;
+  color: #4d59d2;
+  background: #eceeff;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+.signed-in-panel div:nth-child(2) { min-width: 0; flex: 1; }
+.signed-in-panel strong, .signed-in-panel span { display: block; overflow: hidden; text-overflow: ellipsis; }
+.signed-in-panel strong { font-size: 13px; }
+.signed-in-panel span { margin-top: 4px; color: #858b9d; font-size: 11px; }
+
+.secondary-button {
+  padding: 8px 10px;
+  color: #555d78;
+  background: #f6f7fb;
+  border: 1px solid #e8eaf1;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+footer { margin-top: 22px; color: #9ba0ae; font-size: 12px; }
+
+@media (max-width: 520px) {
+  .auth-card { padding: 34px 26px 27px; }
+  h1 { font-size: 26px; }
+}
